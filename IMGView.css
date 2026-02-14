@@ -1,0 +1,41 @@
+[class*="carouselModal"][class*="theme-dark"] {backdrop-filter: none;}
+[class*="scrim"] {
+  background-color: var(--background-scrim);
+  backdrop-filter: blur(5px);
+}
+[class*="topBar"] > [class*="button"] {transform: translateY(2%) scale(1.1);}
+[class*="topBar"] [class*="authorAvatar"] {z-index: 2; transform: translateX(45%);}
+[class*="topBar"] > [class*="author"] {position: relative; transform: translateX(10%);}
+[class*="imageWrapper"] > [class*="loadingOverlay"] {
+  background-color: #ffffff31;
+  border-radius: 8px;
+}
+[class*="topBar"] > [class*="actionButtons"],
+[class*="topBar"] > [class*="button"] {
+  background-color: #ffffff0c;
+}
+[class*="layer"] > div > div > [class*="button"] {
+  background: #5e5e5e1c;
+  transform: scale(140%);
+  height: 50%;
+  display: flex;
+  align-items: center;
+}
+[class*="layer"] > div > div > [class*="button"] > [class*="buttonInner"] {
+  border-color: #6e6e6e;
+  height: 100%;
+}
+[class*="topBar"] > [class*="author"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  bottom: -8%;
+  top: -50%;
+  left: -35%;
+  right: -10%;
+  transform: translateY(15%);
+  background-color: #ffffff0c;
+}
