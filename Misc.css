@@ -1,0 +1,24 @@
+[class*="wrapper"][class*="selected"] [class*="childWrapper"] {background-color: #1d1d1e;}
+foreignObject:not([role="menu"]) {mask: none !important; -webkit-mask: none !important;}
+a,nav,div,input,header,section,article,.vc-plugins,.vc-settings,.vc-addon-card,.default-colors,button,code,pre,img {
+  border-radius: 0 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+[class*="chatContent"] [class^="username"]::before {
+  content: "";
+  position: absolute;
+  inset: 0 -5px;
+  background: currentColor;
+  opacity: 0.2;
+  z-index: -1;
+}
+[class*="cherryBomb"],
+[class*="chicle"],
+[class*="museoModerno"],
+[class*="neoCastel"],
+[class*="pixelify"],
+[class*="sinistre"],
+[class*="zillaSlab"] {
+    font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
