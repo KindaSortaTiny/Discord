@@ -22,3 +22,14 @@ a,nav,div,input,header,section,article,.vc-plugins,.vc-settings,.vc-addon-card,.
 [class*="zillaSlab"] {
     font-family: "gg sans", "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+#app-mount [style*="--status-speaking"]:not([style=""]) {
+    position: absolute !important;
+    inset: 0 !important;
+    border-radius: 0 !important;
+    clip-path: none !important;
+    box-shadow: 
+        0 0 0 0 var(--status-speaking),
+        inset 0 0 0 2px var(--status-speaking),
+        inset 0 0 0 3px var(--background-base-lower) !important;
+    pointer-events: none;
+}
