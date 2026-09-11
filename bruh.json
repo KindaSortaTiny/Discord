@@ -1,0 +1,25 @@
+{
+    "spec": 1,
+    "name": "Brandon Text Thin",
+    "previewText": "Brandon Text Thin",
+    "main": {
+        "ABCGintoNord-ExtraBold": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-Bold": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-BoldItalic": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-ExtraBold": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-ExtraBoldItalic": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-Medium": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-MediumItalic": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-Normal": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-NormalItalic": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-Semibold": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggsans-SemiboldItalic": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "NotoSans-Bold": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "NotoSans-ExtraBold": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "NotoSans-Medium": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "NotoSans-Normal": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "NotoSans-NormalItalic": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "NotoSans-Semibold": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf",
+        "ggmono-Normal": "https://github.com/KindaSortaTiny/Discord/raw/refs/heads/main/BrandonText-Thin.ttf"
+    }
+}
