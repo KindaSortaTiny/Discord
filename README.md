@@ -10,7 +10,10 @@ This repository contains my personal modifications for Discord.
   - No Nitro Name Effects  
   - Nameplate Visible in Chat  
   - Dark Home Button  
-- **SrchPop** – Makes the Search button pop out instead of always displaying.  
+- **SrchPop** – Makes the Search button pop out instead of always displaying.
+
+- **Bruh.json** - Font import for Rain (Mobile Discord)
+- **BrandonText.ttf** - Actual Font
 
 ## Important Notes
 > ⚠️ **Warning:** These modifications are for personal use only.
