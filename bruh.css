@@ -1,29 +1,13 @@
-/* RemoveRound, DarkHome, ColorNamePlate, RemoveNitroNames */
-@import url("https://raw.githubusercontent.com/KindaSortaTiny/Discord/refs/heads/main/Misc.css");
-/* Image Viewer */
-@import url("https://raw.githubusercontent.com/KindaSortaTiny/Discord/refs/heads/main/IMGView.css");
-/* Memberlist Popout */
-@import url("https://raw.githubusercontent.com/KindaSortaTiny/Discord/refs/heads/main/MemPop.css");
-/* Search Popout */
-@import url("https://raw.githubusercontent.com/KindaSortaTiny/Discord/refs/heads/main/SrchPop.css");
-/* Remove Discord Ads */
-@import url("https://codeberg.org/ridge/Discord-Adblock/raw/branch/main/discord-adblock.css");
-/* Radial Status */
-@import url("https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css");
-/* Animate Home Button */
+/* Optional: spinning home/DMB button snippet */
 @import url("https://TirOFlanc.github.io/Discord-Snippets/AnimatedSpinningLogo.css");
 
-@font-face {
-    font-family: "BrandonText-Thin";
-    src: url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.eot");
-    src: url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.eot?#iefix")format("embedded-opentype"),
-    url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.woff2")format("woff2"),
-    url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.woff")format("woff"),
-    url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.ttf")format("truetype"),
-    url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.svg#BrandonText-Regular")format("svg");
-}
+/* Radial Status */
+@import url('https://discordstyles.github.io/RadialStatus/RadialStatus.css');
 
-/* Radial Status Config */
+/* Bright Icons */
+@import url("https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/css/icons.css");
+
+
 :root {
   --rs-small-spacing: 0px; --rs-medium-spacing: 0px; --rs-large-spacing: 4px;
   --rs-small-width: 2px; --rs-medium-width: 3px; --rs-large-width: 4px;
@@ -32,39 +16,293 @@
   --rs-offline-color: #636b75; --rs-streaming-color: #643da7; --rs-invisible-color: #747f8d;
   --rs-self-speaking-color: #57d39b; --rs-phone-color: var(--rs-online-color);
   --rs-phone-visible: block;
-  --font-primary:BrandonText-Thin!important;
-  --font-display:BrandonText-Thin!important;
-  --font-headline:BrandonText-Thin!important;
-  --font-code:BrandonText-Thin!important;
-  --font-clan-body:BrandonText-Thin!important;
-  --font-clan-signature:BrandonText-Thin!important;
-  --font-display-marketing:BrandonText-Thin!important;
-  --font-display-marketing-header:BrandonText-Thin!important;
+	--font-primary:BrandonText-Thin!important;
+	--font-display:BrandonText-Thin!important;
+	--font-headline:BrandonText-Thin!important;
+	--font-code:BrandonText-Thin!important;
+	--font-clan-body:BrandonText-Thin!important;
+	--font-clan-signature:BrandonText-Thin!important;
+	--font-display-marketing:BrandonText-Thin!important;
+	--font-display-marketing-header:BrandonText-Thin!important;
+
+    --clean-bg: #181818;
+    --clean-home-selected: #1d1d1e;
+    --clean-display-name-font: "BrandonText-Thin", sans-serif;
+	
+    --main-color: #151515;
+    --main-alt: #151515;
+    --sidebar-panel-color: #181818;
+    --chat-color: var(--main-color);
+    --message-color: #1a1a1a;
+    --message-color-alt: #151515;
+    --message-color-hover: #202020;
+    --attachment-color: #151515;
+    --main-textarea-color: #1b1b1b;
+    --main-textarea-inner-color: #151515;
+    --main-textarea-button-color: #b8b8b8;
+    --input-color: #191919;
+    --input-color-alt: #202020;
+    --input-border-color: #333333;
+    --input-text-color: #d0d0d0;
+    --input-placeholder-color: #888888;
+    --button-link-color: hsl(0,0%,80%);
+    --button-link-text-color: hsl(0,0%,80%);
+    --text-brand: hsl(0,0%,75%);
+    --text-link: hsl(0,0%,75%);
 }
 
-/* remove disco panel */
-[class*="panels__"] {
-    display:none
+@font-face {
+    font-family: "BrandonText-Thin";
+    src:
+        url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.woff2")
+            format("woff2"),
+        url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.woff")
+            format("woff");
+    font-display: swap;
 }
 
-/* collapse guild list and open on hover */
-[class*="guilds__"] {
-    width: 10px;
-    transition: width 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
-}
-[class*="guilds__"]:hover {width: 65px;}
+/* ------------------------------------------------------------------------- */
+/* Flat / square UI                                                          */
+/* ------------------------------------------------------------------------- */
 
-/* collapse server/dm list and open on hover */
-[class*="sidebarList__"] {
-    width: 10px;
-    transition: width 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
+/* Keep this deliberately scoped—global div/input rules are too destructive. */
+:is(
+    button,
+    input,
+    textarea,
+    select,
+    code,
+    pre,
+    img,
+    [role="button"],
+    [class*="card"],
+    [class*="container"],
+    [class*="wrapper"]
+) {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
 }
-/* Expand server/dm list when hovering it */
-[class*="sidebarList__"]:hover {width: 260px;}
-body:has(.panels__5e434:hover) [class*="sidebarList__"] {width: 260px;}
 
-/* collapse memberlist and open on hover */
-.container_c8ffbb {
-    width: 10px;
-    transition: width 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
+/* Selected Home / DM button. */
+[class*="wrapper"][class*="selected"] > [class*="childWrapper"],
+[class*="wrapper"][class*="selected"] [class*="childWrapper"] {
+    background-color: var(--clean-home-selected) !important;
 }
+
+/* Removes SVG masking used by some Discord UI effects. */
+foreignObject:not([role="menu"]) {
+    mask: none !important;
+    -webkit-mask: none !important;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Profile surfaces                                                          */
+/* ------------------------------------------------------------------------- */
+
+/*
+ * Uses class fragments rather than Discord's build-specific suffixes such as
+ * profile__9c3be. This catches both profile modals and most popouts.
+ */
+:is(
+    [class*="user-profile"],
+    [class*="userProfile"],
+    [class^="profile_"],
+    [class*=" profile_"],
+    [class^="profileBody"],
+    [class^="profileContent"],
+    [class^="profileHeader"],
+    [class^="tabBarPanel"],
+    [class^="tabPanelScroller"],
+    [class^="gameWidgetGrid"],
+    [class^="widgetContainer"]
+) {
+    background: var(--clean-bg) !important;
+    background-image: none !important;
+}
+
+/* Discord profile-gradient custom properties. */
+:is(
+    [class*="user-profile"],
+    [class*="userProfile"],
+    [class^="profile_"],
+    [class*=" profile_"]
+) {
+    --profile-gradient-primary-color: var(--clean-bg) !important;
+    --profile-gradient-secondary-color: var(--clean-bg) !important;
+    --profile-gradient-modal-background-color: var(--clean-bg) !important;
+    --profile-background: var(--clean-bg) !important;
+}
+
+/* Neutralize inline profile background imagery without affecting normal media. */
+:is(
+    [class*="user-profile"],
+    [class*="userProfile"],
+    [class^="profile_"],
+    [class*=" profile_"]
+) [style*="background-image"],
+:is(
+    [class*="user-profile"],
+    [class*="userProfile"],
+    [class^="profile_"],
+    [class*=" profile_"]
+) [style*="backgroundImage"],
+:is(
+    [class*="user-profile"],
+    [class*="userProfile"],
+    [class^="profile_"],
+    [class*=" profile_"]
+) [class*="backgroundImage"] {
+    background-color: var(--clean-bg) !important;
+    background-image: none !important;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Remove Discord cosmetic profile items                                     */
+/* ------------------------------------------------------------------------- */
+
+/* Avatar decorations. */
+svg[class*="avatarDecoration"],
+img[class*="avatarDecoration"],
+[class*="avatarDecoration"] {
+    display: none !important;
+}
+
+/* Equipped profile effects and their overlay/layer containers. */
+[class*="profileEffects"],
+[class*="profileEffect"] {
+    display: none !important;
+}
+
+/* Profile banner and background-image containers. */
+[class*="profileBanner"],
+[class*="profileHeaderBanner"],
+[class*="banner_"],
+[class*="banner-"],
+[class*="fill_"][class*="banner"] {
+	display:none !important;
+}
+
+/* Frames around avatars/profiles. */
+[class*="profileFrame"],
+[class*="avatarFrame"] {
+    display: none !important;
+}
+
+/* User badges in popouts and full profiles. */
+[aria-label="User Badges"],
+[aria-label*="User Badges"] {
+    display: none !important;
+}
+
+/* ------------------------------------------------------------------------- */
+/* Display Name Styles                                                       */
+/* ------------------------------------------------------------------------- */
+
+/*
+ * data-username-with-effects is currently the most useful stable hook.
+ * Target the element itself instead of every enclosing container.
+ */
+[data-username-with-effects] {
+    font-family: var(--clean-display-name-font) !important;
+
+    background: none !important;
+    background-image: none !important;
+    background-clip: border-box !important;
+    -webkit-background-clip: border-box !important;
+
+    color: inherit !important;
+    -webkit-text-fill-color: currentColor !important;
+    -webkit-text-stroke: 0 transparent !important;
+
+    filter: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    text-shadow: none !important;
+
+    animation: none !important;
+    transition: none !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Remove generated style overlays around display names. */
+[data-username-with-effects]::before,
+[data-username-with-effects]::after {
+    content: none !important;
+    display: none !important;
+}
+
+/*
+ * Override Discord’s name-style palette directly on the named element.
+ * currentColor preserves whatever role/user colour Discord has assigned.
+ */
+[data-username-with-effects] {
+    --custom-display-name-styles-main-color: currentColor !important;
+    --custom-display-name-styles-light-1-color: currentColor !important;
+    --custom-display-name-styles-light-2-color: currentColor !important;
+    --custom-display-name-styles-dark-1-color: currentColor !important;
+    --custom-display-name-styles-dark-2-color: currentColor !important;
+    --custom-display-name-styles-toon-stroke-color: transparent !important;
+    --custom-display-name-styles-neon-stroke-color: transparent !important;
+    --custom-display-name-styles-font-opacity: 1 !important;
+}
+
+[class*="wrapper"][class*="selected"] [class*="childWrapper"] {background-color: #1d1d1e;}
+foreignObject:not([role="menu"]) {mask: none !important; -webkit-mask: none !important;}
+a,nav,div,input,header,section,article,.vc-plugins,.vc-settings,.vc-addon-card,.default-colors,button,code,pre,img {
+  border-radius: 0 !important;
+  text-shadow: none !important;
+  box-shadow: none !important;
+}
+
+[class*="messagesWrapper"] {
+  background-color: #121212 !important;
+}
+
+[role="separator"] {
+  background-color: #121212 !important;
+}
+
+#app-mount [style*="--status-speaking"]:not([style=""]) {
+    position: absolute !important;
+    inset: 0 !important;
+    border-radius: 0 !important;
+    clip-path: none !important;
+    box-shadow: 
+        0 0 0 0 var(--status-speaking),
+        inset 0 0 0 2px var(--status-speaking),
+        inset 0 0 0 3px var(--background-base-lower) !important;
+    pointer-events: none;
+}
+
+a[href="/quest-home"] {
+  display: none;
+}
+
+.channelTextArea_f75fb0,
+.channelTextArea__74017 {
+    background: #1b1b1b !important;
+    border-radius: 0 !important;
+}
+
+.toolbar__9293f .iconWrapper__9293f.clickable__9293f {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+}
+
+.channelTextArea_f75fb0 [class*="scrollableContainer"],
+.channelTextArea__74017 [class*="scrollableContainer"] {
+    background: #151515 !important;
+    border-radius: 0 !important;
+}
+
+.theme-dark .themed__9293f, .theme-dark .children__9293f:after {
+    background: var(--chat-color) !important;
+    background-image: none !important;
+    border-radius: 0 !important;
+}
+
+.chatContent_f75fb0, .chatGradient__36d07 {background: none}
