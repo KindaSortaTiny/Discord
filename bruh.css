@@ -1,0 +1,70 @@
+/* RemoveRound, DarkHome, ColorNamePlate, RemoveNitroNames */
+@import url("https://raw.githubusercontent.com/KindaSortaTiny/Discord/refs/heads/main/Misc.css");
+/* Image Viewer */
+@import url("https://raw.githubusercontent.com/KindaSortaTiny/Discord/refs/heads/main/IMGView.css");
+/* Memberlist Popout */
+@import url("https://raw.githubusercontent.com/KindaSortaTiny/Discord/refs/heads/main/MemPop.css");
+/* Search Popout */
+@import url("https://raw.githubusercontent.com/KindaSortaTiny/Discord/refs/heads/main/SrchPop.css");
+/* Remove Discord Ads */
+@import url("https://codeberg.org/ridge/Discord-Adblock/raw/branch/main/discord-adblock.css");
+/* Radial Status */
+@import url("https://raw.githubusercontent.com/DiscordStyles/RadialStatus/deploy/RadialStatus.theme.css");
+/* Animate Home Button */
+@import url("https://TirOFlanc.github.io/Discord-Snippets/AnimatedSpinningLogo.css");
+
+@font-face {
+    font-family: "BrandonText-Thin";
+    src: url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.eot");
+    src: url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/96c3383c75d7e44d109180556e6188f9.svg#BrandonText-Regular")format("svg");
+}
+
+/* Radial Status Config */
+:root {
+  --rs-small-spacing: 0px; --rs-medium-spacing: 0px; --rs-large-spacing: 4px;
+  --rs-small-width: 2px; --rs-medium-width: 3px; --rs-large-width: 4px;
+  --rs-avatar-shape: 0%; /* Square */
+  --rs-online-color: #43b581; --rs-idle-color: #faa61a; --rs-dnd-color: #f04747;
+  --rs-offline-color: #636b75; --rs-streaming-color: #643da7; --rs-invisible-color: #747f8d;
+  --rs-self-speaking-color: #57d39b; --rs-phone-color: var(--rs-online-color);
+  --rs-phone-visible: block;
+  --font-primary:BrandonText-Thin!important;
+  --font-display:BrandonText-Thin!important;
+  --font-headline:BrandonText-Thin!important;
+  --font-code:BrandonText-Thin!important;
+  --font-clan-body:BrandonText-Thin!important;
+  --font-clan-signature:BrandonText-Thin!important;
+  --font-display-marketing:BrandonText-Thin!important;
+  --font-display-marketing-header:BrandonText-Thin!important;
+}
+
+/* remove disco panel */
+[class*="panels__"] {
+    display:none
+}
+
+/* collapse guild list and open on hover */
+[class*="guilds__"] {
+    width: 10px;
+    transition: width 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
+}
+[class*="guilds__"]:hover {width: 65px;}
+
+/* collapse server/dm list and open on hover */
+[class*="sidebarList__"] {
+    width: 10px;
+    transition: width 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
+}
+/* Expand server/dm list when hovering it */
+[class*="sidebarList__"]:hover {width: 260px;}
+body:has(.panels__5e434:hover) [class*="sidebarList__"] {width: 260px;}
+
+/* collapse memberlist and open on hover */
+.container_c8ffbb {
+    width: 10px;
+    transition: width 0.2s ease 0.1s, opacity 0.2s ease 0.1s;
+}
